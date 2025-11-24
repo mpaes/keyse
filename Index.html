@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informações sobre Racismo no Brasil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+    nav button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+    }
+    section {
+      display: none;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images.jpeg" alt="Imagem destaque contra o racismo" style="width:20%; height:auto; display:block; margin:15px auto; border-radius:10px;">
+  </header>
+
+  <nav>
+    <button onclick="mostrar('geral')">Informações Gerais</button>
+    <button onclick="mostrar('historico')">Histórico</button>
+    <button onclick="mostrar('combate')">Como Combater</button>
+  </nav>
+
+  <section id="geral" class="active">
+    <h2>Informações Gerais</h2>
+    <p>O racismo no Brasil é um problema estrutural que se manifesta em diversas esferas sociais, como educação, mercado de trabalho, segurança pública e acesso à saúde. Apesar de ser um país reconhecido pela diversidade, desigualdades raciais persistem desde o período colonial.</p>
+  </section>
+
+  <section id="historico">
+    <h2>Histórico do Racismo no Brasil</h2>
+    <p>O racismo brasileiro tem raízes na escravidão, que durou mais de 300 anos. Mesmo após a abolição, a população negra enfrentou exclusão social, falta de oportunidades e ausência de políticas públicas de inclusão — desafios que ainda refletem na sociedade atual.</p>
+  </section>
+
+  <section id="combate">
+    <h2>Como Combater o Racismo</h2>
+    <p>Combater o racismo envolve educação, conscientização e atitudes individuais e coletivas. Políticas afirmativas, debates públicos, representatividade e a denúncia de atos discriminatórios são passos essenciais para construir uma sociedade mais justa.</p>
+  </section>
+
+  <script>
+    function mostrar(secao) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(secao).classList.add('active');
+    }
+  </script>
+</body>
+</html>
